@@ -1,0 +1,32 @@
+{
+  "name": "inteligentio",
+  "version": "1.0.0",
+  "description": "Application for home automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krecikzgr/Inteligentio-new.git"
+  },
+  "keywords": [
+    "home",
+    "automation"
+  ],
+  "author": "Adrian Kaleta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krecikzgr/Inteligentio-new/issues"
+  },
+  "homepage": "https://github.com/krecikzgr/Inteligentio-new#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.0-beta4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}
