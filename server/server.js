@@ -2,8 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient
-const configurator = require('../api/config.js');
-
+const config = require('../config/api/ConfigApi.js')
 
 app.use(bodyParser.urlencoded({extended: true}))
 
@@ -17,6 +16,7 @@ app.get('/', (req,res)=> {
 });
 
 app.get('/config', (req, res) => {
+   
    var items  = configurator.readConfig();
    console.log(items);
     res.send('config is called');
@@ -24,8 +24,8 @@ app.get('/config', (req, res) => {
   })
 
   app.post('/config', (req, res) => {
-    configurator.createConfig();
-    res.send('config created');
+    config.initConfig();
+    res.send('config creted');
   })
 
   app.post('/sensor', (req, res) => {
