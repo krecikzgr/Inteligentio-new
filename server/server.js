@@ -24,8 +24,8 @@ app.get('/config', (req, res) => {
   })
 
   app.post('/config', (req, res) => {
-    config.initConfig();
-    res.send('config creted');
+    config.initConfig(req, res);
+    //res.send('config creted');
   })
 
   app.post('/sensor', (req, res) => {
