@@ -2,11 +2,10 @@ var Config = require('../model/ConfigSchema.js')
 
 
 function initConfig(req, res) {
-    var newConfig = Config({
-        name: "Test Config",
-        listenPin: 1,
-        actionPin: 2,
+    var newConfig = new Config({
+        name: "Test Config"
     })
+    console.log('before config');
     newConfig.save(function(err) {
         console.log('init schema')
         if (err) return res.status(500).send(err);

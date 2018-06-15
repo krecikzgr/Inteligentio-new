@@ -7,9 +7,6 @@ const config = require('../config/api/ConfigApi.js')
 app.use(bodyParser.urlencoded({extended: true}))
 
 
-app.listen(3000, function() {
-    console.log('listening on 3000')
-  })
 
 app.get('/', (req,res)=> {
     res.send('Hello World');
@@ -31,4 +28,8 @@ app.get('/config', (req, res) => {
   app.post('/sensor', (req, res) => {
     res.send('Sensor state');
     console.log('Sensor state!')
+  })
+
+  app.listen(3000, function() {
+    console.log('listening on 3000')
   })

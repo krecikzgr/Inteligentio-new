@@ -1,13 +1,14 @@
 // grab the things we need
 var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27018/')
 var Schema = mongoose.Schema;
 
 // create a schema
 var configSchema = new Schema({
-  name: String,
-  listenPin: Number,
-  actionPin: Number,
-  updated_at: Date
+  name: String
+  // listenPin: Number,
+  // actionPin: Number,
+  // updated_at: Date
 });
 
 // configSchema.pre('save', function(next) {
