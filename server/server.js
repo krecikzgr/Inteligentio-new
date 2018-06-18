@@ -7,29 +7,16 @@ const config = require('../config/api/ConfigApi.js')
 app.use(bodyParser.urlencoded({extended: true}))
 
 
-
-app.get('/', (req,res)=> {
-    res.send('Hello World');
-});
-
-app.get('/config', (req, res) => {
-   
-   var items  = configurator.readConfig();
-   console.log(items);
-    res.send('config is called');
-
-  })
-
-  app.post('/config', (req, res) => {
-    config.initConfig(req, res);
-    //res.send('config creted');
-  })
-
-  app.post('/sensor', (req, res) => {
-    res.send('Sensor state');
-    console.log('Sensor state!')
-  })
-
-  app.listen(3000, function() {
-    console.log('listening on 3000')
-  })
+  module.exports = {
+    start() {
+        server.listen(3001, () => {
+            console.log('server up');
+        })
+    },
+    register(resource){
+        resource(server);
+    },
+    getServer(){
+        return server;
+    }
+};
