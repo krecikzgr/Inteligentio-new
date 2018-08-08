@@ -1,10 +1,15 @@
-node_modules
-tests/*.test.js
-tests/*.test.js.map
-report
-coverage
-/build.xml
+coverage/
+node_modules/
+node_modules */
+report/
+/lib
+tests/tests.js
+tests/tests.js.map
 
+build*.xml
+README.doc
+
+/.idea
 coverage/
 node_modules/
 report/
@@ -12,11 +17,6 @@ tests/tests.js
 tests/tests.js.map
 build*.xml
 README.doc
-/.scannerwork
 /dist
 
-
-
-
-
-
+/lib
