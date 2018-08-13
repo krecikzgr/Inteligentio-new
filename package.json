@@ -2,10 +2,10 @@
   "name": "inteligentio",
   "version": "1.0.0",
   "description": "Application for home automation",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "test",
-    "dev": "nodemon server/server.js"
+    "dev": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,8 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "mongodb": "^3.1.0-beta4",
-    "mongoose": "^5.1.4"
+    "pg": "^7.4.3",
+    "restify": "^7.2.1"
   },
   "devDependencies": {
     "nodemon": "^1.17.4"
