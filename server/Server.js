@@ -1,4 +1,7 @@
-const restify = require('restify');
+
+var restify = require('restify');
+
+
 const server = restify.createServer();
 
 module.exports = {
