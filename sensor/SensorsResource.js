@@ -1,6 +1,9 @@
 
 const sensorsService = require('./SensorService');
 
+sensorsService.registerButton();
+
+
 module.exports = server => {
     server.get('/sensors', (req, res, next) => {
         const page = req.params.page ? parseInt(req.params.page, 10) : 0;

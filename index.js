@@ -4,6 +4,7 @@ const server = require('./server/Server');
 
 
 
+
 server.register(sensorsResource);
 server.start();
 

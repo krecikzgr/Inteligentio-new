@@ -1,5 +1,5 @@
 const fakeDataBase = require('../db/FakeDatabase');
-
+var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIOnpm
 
 const getSensors = (start, size) => {
     const sensors = fakeDataBase.getSensorsTable();
@@ -7,32 +7,17 @@ const getSensors = (start, size) => {
     return sortedSensors;
 };
 
-// const getTweet = id => {
-//     const tweetId = parseInt(id, 10);
 
-//     const tweets = fakeDataBase.getTweetsTable()
-//     tweets.find(a.id == tweetId);
-//     //TODO return a single tweet by it's tweetId
-//     //- Hint: use the array.find-function
-//     return null;
-// };
+const registerButton = () => {
 
-// const countTweets = () => {
-//     //TODO: return the count of all tweets (TIP: use array.length)
-//     return fakeDataBase.getTweetsTable.length;
-// };
-
-// const createTweet = tweet => {
-//     //TODO
-//     tweet.id = fakeDataBase.getTweetsTable().length+1;
-//     fakeDataBase.getTweetsTable().push(tweet);
-//     //- add the tweet to the database (Hint: use array.push)
-//     //- set the id of a tweet BEFORE adding it
-//     //- return the created tweet
-//     return tweet;
-// };
-
+    console.log('register class played');
+    var led = new Gpio(21, 'out'); //use GPIO pin 4 as output
+    const button = new Gpio(18, 'in', 'both');
+ 
+    button.watch((err, value) => led.writeSync(value));
+}
 
 module.exports = {
-    getSensors
+    getSensors,
+    registerButton
 };
