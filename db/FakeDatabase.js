@@ -9,7 +9,7 @@ const IN_MEMORY_SENSORS = [
 
 
 module.exports = {
-    getSensorsTable() {
+    getSwitchesTable() {
         return IN_MEMORY_SENSORS;
     }
 };

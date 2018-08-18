@@ -1,10 +1,10 @@
 
-const sensorsResource = require('./sensor/SensorsResource');
+const lightsResource = require('./lightSwitches/LightSwitchResource');
 const server = require('./server/Server');
 
 
 
 
-server.register(sensorsResource);
+server.register(lightsResource);
 server.start();
 
