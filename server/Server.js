@@ -1,8 +1,10 @@
 
 var restify = require('restify');
-
-
+const networkScanner = require('../networkScanner/NetworkScanner')
 const server = restify.createServer();
+
+
+networkScanner.announce();
 
 module.exports = {
     start() {

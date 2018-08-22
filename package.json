@@ -23,6 +23,7 @@
   "homepage": "https://github.com/krecikzgr/Inteligentio-new#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "bonjour": "^3.5.0",
     "express": "^4.16.3",
     "onoff": "^3.2.1",
     "pg": "^7.4.3",

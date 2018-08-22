@@ -2,7 +2,7 @@
 const lightSwitchesService = require('./LightSwitchService');
 
 lightSwitchesService.registerButton();
-
+lightSwitchesService.registerMotionDetector();
 
 module.exports = server => {
     server.get('/lights', (req, res, next) => {
