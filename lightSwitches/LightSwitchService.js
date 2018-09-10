@@ -85,6 +85,7 @@ const checkIfMotionStillExists = () => {
 }
 const pushTheButton = () => {
     led.writeSync((led.readSync() ^ 1)); 
+
 }
 
 const setRelayState = (state) => {
